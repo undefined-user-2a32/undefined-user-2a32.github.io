@@ -2,5 +2,7 @@ title: "Undefined Android Blog"
 description: "GitHub Pages"
 
 theme: minima
+minima:
+  skin: dark
 plugins:
   - jekyll-feed
