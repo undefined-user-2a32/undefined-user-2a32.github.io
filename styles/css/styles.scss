@@ -1,0 +1,23 @@
+---
+---
+
+@import "minima";
+
+// --- Dark mode override ---
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+a {
+  color: #80bfff;
+}
+
+header, footer {
+  background-color: #1e1e1e;
+  color: #ccc;
+}
+
+.site-title, .site-nav {
+  color: #eee;
+}

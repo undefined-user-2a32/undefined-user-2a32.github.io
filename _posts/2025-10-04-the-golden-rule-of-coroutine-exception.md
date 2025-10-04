@@ -2,9 +2,10 @@
 layout: post
 title: "Золоте правило Coroutine Exception"
 date: 2025-10-04 23:39:00 +0300
+tags: [Android, Переклад]
 ---
 
-Дещо вільний переклад статті [[https://proandroiddev.com/the-golden-rule-of-coroutine-exceptions-8d4538158ab5|The Golden Rule of Coroutine Exceptions]]
+Дещо вільний переклад статті [The Golden Rule of Coroutine Exceptions](https://proandroiddev.com/the-golden-rule-of-coroutine-exceptions-8d4538158ab5)
 
 ---
 
@@ -48,7 +49,7 @@ fun main() = runBlocking {
 
 **Вивід:**
 
-```json
+```text
 Before launch  
 After launch  
 Inside launch: Throwing exception...  
@@ -90,7 +91,7 @@ fun main() = runBlocking {
 
 **Вивід:**
 
-```json
+```text
 Before launch  
 After launch  
 Inside launch: Doing some work...  
@@ -138,7 +139,7 @@ fun main() = runBlocking {
 
 **Вивід:**
 
-```json
+```text
 Before async  
 After async  
 Inside async: About to fail...  
@@ -183,7 +184,7 @@ fun main() = runBlocking {
 
 **Вивід:**
 
-```json
+```text
 Before async  
 After async  
 Inside async: About to fail...  
@@ -234,7 +235,7 @@ fun main() = runBlocking {
 
 **Вивід:**
 
-```json
+```text
 Starting the scope...  
 Child 1: Working for 1000ms...  
 Child 2: Working for 500ms then failing...  
@@ -292,7 +293,7 @@ fun main() = runBlocking {
 
 **Вивід:**
 
-```json
+```text
 
 Starting the supervisor scope...  
 Child 1: Working for 500ms then failing...  
@@ -339,7 +340,7 @@ fun main() = runBlocking {
 
 **Вивід:**
 
-```json
+```text
 Starting the supervisor scope...  
 Child 1: I'm going to fail.  
 Child 2: I will succeed.  
@@ -387,7 +388,7 @@ fun main() = runBlocking {
 
 **Вивід:**
 
-```json
+```text
 Child 1: Failing...  
 Caught by CoroutineExceptionHandler: java.lang.AssertionError: Something is wrong!  
 Child 2: I'm alive!  
@@ -442,7 +443,7 @@ fun main() = runBlocking {
 
 **Вивід:**
 
-```json
+```text
 Starting supervisor scope with async...  
 Async 1: I will fail in 500ms.  
 Async 2: I will succeed in 1000ms.  
@@ -490,7 +491,7 @@ fun main() = runBlocking {
 
 **Вивід:**
 
-```json
+```text
 Job: I'm working...  
 Main: I'm tired of waiting, cancelling the job.  
 Job: I was cancelled. Re-throwing exception.  
@@ -533,7 +534,7 @@ fun main() = runBlocking {
 
 **Вивід:**
 
-```json
+```text
 Job: Working...  
 Main: Cancelling the job.  
 Job: Entering finally block.  
@@ -586,7 +587,7 @@ fun main() = runBlocking {
 
 **Вивід:**
 
-```json
+```text
 Inner Scope Failing Child: I'm about to fail!  
 Supervisor's Child 1: I survived!  
 All done.  
@@ -638,7 +639,7 @@ fun main() = runBlocking { // This creates the root Job (parent)
 
 **Вивід:**
 
-```json
+```text
 Parent Scope: I'm the parent job.  
 Parent Scope: Waiting for my children to finish.  
   Child 1: I'm a child of the parent scope.  
@@ -702,7 +703,7 @@ fun main() = runBlocking {
 
 **Вивід:**
 
-```json
+```text
 Risky Task: Starting...  
 Stable Task: I'm running...  
 Component Scope: Caught an error: java.lang.RuntimeException: Something went wrong!  
@@ -750,7 +751,7 @@ fun main() = runBlocking {
 
 **Вивід:**
 
-```json
+```text
 Task 1: I have 1 second to complete.  
 Task 1 failed: Timed out waiting for 1000 ms  
 ---  
@@ -801,7 +802,7 @@ fun main() = runBlocking {
 
 **Вивід:**
 
-```json
+```text
 Starting multiple async jobs.  
 Job 2: Failing!  
 Job 1: Success.  
@@ -812,5 +813,4 @@ Caught exception in awaitAll: Job 2 Error
 
 Отже, це все це стосується обробки винятків у корутинах. Сподіваюсь, що ця стаття була вам цікавою.
 Якщо у вас виникли запитання, давайте конектитись на LinkedIn
-
 [https://www.linkedin.com/in/devbaljeet/](https://www.linkedin.com/in/devbaljeet/)
