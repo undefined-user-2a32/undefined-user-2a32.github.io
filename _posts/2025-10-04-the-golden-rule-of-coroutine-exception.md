@@ -649,7 +649,7 @@ Parent Scope: Waiting for my children to finish.
   Child 1: I'm done.
 ```
 
-Тут `runBlocking` — це або батьківська Job. Вона завершується лише після завершення обох `job1` та `job2.
+Тут `runBlocking` — це або батьківська Job. Вона завершується лише після завершення обох `job1` та `job2`.
 
 ## Випадок 11: `supervisorScope` проти `CoroutineScope(SupervisorJob())`
 
